@@ -1,0 +1,32 @@
+<div *ngIf="showSuccessMsg" class="toast toast-success">
+    <h4 class="toast-heading">Success...!</h4>
+    <p>Account created successfully.</p>
+    <a class="close" (click)="closeToaster()">&times;</a>
+</div>
+<section class="login-form">
+    <div class="card">
+        <h3 class="text-center">{{showLogin ? 'Login' :'Register'}}</h3>
+        <div *ngIf="errors.length > 0" class="error-messages" role="alert">
+            <ul class="errors" *ngFor="let error of errors">
+                <li class="error-item">
+                    {{error}}
+                </li>
+            </ul>
+        </div>
+        <form>
+            <div class="form-group">
+                <label>Email ID</label>
+                <input class="form-control" type="text" [(ngModel)]="emailId" name="emailID">
+                <label>Password</label>
+                <input class="form-control" type="password" [(ngModel)]="password" name="password">
+                <div class="register-btn">
+                    <button type="button" class="btn btn-danger" [disabled]="!(emailId && password)" (click)="onSubmit()">{{showLogin ? 'Login' :'Register'}}</button>
+                </div>
+            </div>
+        </form>
+        <div class="toggle-link">
+            <p class="reg-link" *ngIf="showLogin">Don't have Account ? Click here to <button (click)="toggleLink()" class="link-btn">Register</button>.</p>
+            <p class="login-link" *ngIf="!showLogin">Have an Account ? Click here to <button (click)="toggleLink()" class="link-btn">Login</button>.</p>
+        </div>
+    </div>
+</section>

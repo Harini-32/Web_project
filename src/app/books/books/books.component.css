@@ -1,0 +1,58 @@
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.books {
+    height: 70vh;
+    margin: 2rem auto;
+    position: relative;
+    background: url("https://images.pexels.com/photos/2041540/pexels-photo-2041540.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.books header {
+    color: white;
+    position: absolute;
+    top: 30%;
+    font-weight: bold;
+    left: calc(20%);
+}
+
+.books header h2 {
+    font-size: 50px;
+}
+
+.card-img-top {
+    height: 220px;
+    margin-top: 10px;
+}
+
+.card {
+    border-radius: 10px;
+    border: 1px solid #de1975;
+    box-shadow: 0 10px 20px #ccc;
+}
+
+.card .btn {
+    background-color: #de1975;
+    border: none;
+}
+
+.book-cat-list {
+    margin-bottom: 20px;
+}
+
+
+/* .footer {
+    text-align: center;
+    background-color: #e26ba3;
+    color: white;
+} */

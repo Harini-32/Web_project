@@ -1,0 +1,33 @@
+<div class="mt-20 checkout">
+    <header>
+        <h2 class="text-center">My Favorites</h2>
+    </header>
+</div>
+<div *ngIf="showToaster" class="toast toast-success">
+    <h4 class="toast-heading">Success...!</h4>
+    <p>Deleted from favorites...</p>
+    <a class="close" (click)="closeToaster()">&times;</a>
+</div>
+
+<div class="fav-list">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let fav of favorites">
+            <div class="fav-book">
+                <div class="book-img">
+                    <img [src]="fav.book.image" alt="book-img" />
+                </div>
+                <div class="title">
+                    <h3>{{ fav.book.title }}</h3>
+                </div>
+                <div class="detail-btn">
+                    <button class="btn btn-detail" (click)="goToDetails(fav.book)">
+            View Detail
+          </button>
+                    <button class="btn btn-danger" (click)="deleteFav(fav)">
+            Delete
+          </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

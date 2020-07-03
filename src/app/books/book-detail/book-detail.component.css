@@ -1,0 +1,28 @@
+.book-deatil {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 10px 20px #ccc;
+    border-radius: 25px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.book-img {
+    height: 90%;
+    width: 100%;
+    border: 1px solid #dfd5d9;
+    padding: 20px;
+}
+
+.desc {
+    text-indent: 50px;
+}
+
+.btn-preview {
+    background-color: #de1975;
+    border: none;
+    /* padding: 10px; */
+    color: white;
+    margin-right: 20px;
+}
+

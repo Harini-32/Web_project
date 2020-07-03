@@ -1,0 +1,31 @@
+<div class="books">
+    <header class="mt-10 text-center">
+        <h2 class="title">Library Management System</h2>
+        <p class="sub">Lakhs of Books available for you in thousands of genres.</p>
+        <button class="btn btn-danger">Explore</button>
+    </header>
+</div>
+<div class="books-cat">
+    <header class="mt-10 text-center">
+        <h2 class="title">Categories</h2>
+    </header>
+
+    <div class="row mt-20">
+        <div class="col-md-4 book-cat-list" *ngFor="let genre of genres">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>{{genre.title}}</strong></h5>
+                    <p class="card-text">{{genre.desc}}</p>
+                    <button class="btn btn-primary" (click)="goToDetails(genre)">View Books</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="footer">
+    <footer>
+        <p>Project Developed for WEB programming</p>
+        <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+    </footer>
+</div> -->

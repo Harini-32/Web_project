@@ -1,0 +1,59 @@
+<div class="books">
+    <header class="mt-10 text-center">
+        <h2 class="title">{{ title }}</h2>
+    </header>
+</div>
+<div *ngIf="showToaster" class="toast toast-success">
+    <h4 class="toast-heading">Success...!</h4>
+    <p>Added to favorites...</p>
+    <a class="close" (click)="closeToaster()">&times;</a>
+</div>
+<div class="books-cat">
+    <div class="row mt-20">
+        <div class="col-md-4 book-cat-list" *ngFor="let book of bookList">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <strong>{{ book.title }}</strong>
+                    </h5>
+                    <!-- <p class="subtite"><strong></strong>{{book.subtitle}}</strong></p> -->
+                    <p>
+                        <small class="text-muted">{{ book.subtitle }}</small>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="category">
+                                Author:
+                                <strong>{{
+                  book.authors ? book.authors[0] : "Not Available"
+                }}</strong>
+                            </p>
+                            <p class="pub-date">
+                                Published Date: <strong>{{ book.pubDate }}</strong>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image">
+                                <img [src]="book.image" class="img-thumbnail" alt="book-img" />
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-details btn-primary" (click)="goToDetails(book)">
+            View Detail
+          </button>
+                    <button class="btn btn-add btn-success" (click)="addToFavorites(book)" *ngIf="loggedIn">
+            Add to Favorites
+          </button>
+                    <!-- <a href="https://www.amazon.com/s?k={{book.title}}" target="_blank"  class="btn btn-add btn-success">Add Book</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="footer">
+  <footer>
+      <p>Project Developed for WEB programming</p>
+      <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+  </footer>
+</div> -->

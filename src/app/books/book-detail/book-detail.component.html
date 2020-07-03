@@ -1,0 +1,58 @@
+<div class="book-detail-header">
+    <header class="mt-10 text-center">
+        <h2 class="title">Details of Book</h2>
+    </header>
+</div>
+
+<div class="book-deatil" *ngIf="book">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="book-img" [src]="book.image" alt="book-img" />
+        </div>
+        <div class="col-md-8">
+            <div class="header mt-10 mb-10">
+                <h3 class="header">{{ book.title }}</h3>
+            </div>
+            <p class="desc" [innerHtml]="book.desc"></p>
+
+            <div class="category mt-10">
+                Publsihed By :
+                <strong *ngFor="let cat of book?.categories; let i = index">{{ cat }} {{ i === book.categories.length - 1 ? "" : ", " }}</strong
+        >
+      </div>
+      <div class="author mt-10">
+        Authors :
+        <strong *ngFor="let author of book?.authors; let i = index"
+          >{{ author }} {{ i === book.authors.length - 1 ? "" : ", " }}
+        </strong>
+            </div>
+            <div class="publisher mt-10">
+                Publsihed By : <strong>{{ book.publisher }}</strong>
+            </div>
+            <div class="publisher mt-10">
+                Publsihed Date : <strong>{{ book.publishedDate }}</strong>
+            </div>
+            <div class="preview mt-10">
+                <a href="{{ book.previewLink }}" target="_blank" class="btn btn-preview">Preview</a
+        >
+        <a
+          href="https://www.amazon.com/s?k={{ book.title }} + {{
+            book.authors
+          }}"
+          target="_blank"
+          class="btn btn-add btn-success"
+          >Buy Book</a>
+          <br>
+          <br>
+<div class="button">
+  <button type="button" class="btn btn-add btn-primary" (click)="classifyCheck()">Review</button>
+</div>
+
+<div id="container" *ngIf="classifyData != null">
+  <br>
+  <strong>{{result}}</strong>
+</div>    
+      </div>
+    </div>
+  </div>
+</div>

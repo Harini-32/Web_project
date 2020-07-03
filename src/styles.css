@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.header {
+    font-weight: bold;
+}

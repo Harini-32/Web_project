@@ -1,0 +1,103 @@
+.login-form {
+    padding: 10px;
+    width: 80%;
+    margin: 2rem auto;
+    background: url("https://images.pexels.com/photos/2041540/pexels-photo-2041540.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 50%;
+}
+
+.card {
+    width: 60%;
+    margin: 2rem auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px #ccc;
+}
+
+.register-btn {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-btn .btn-danger {
+    background-color: #DE1975;
+}
+
+label {
+    margin: 0;
+}
+
+input.form-control {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    margin-bottom: 1rem;
+}
+
+input.form-control:focus {
+    border: none;
+    border-bottom: 1px solid #DE1975;
+}
+
+.link-btn {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    padding: 0;
+    border-bottom: 1px solid #DE1975;
+}
+
+.toggle-link {
+    margin-left: 10px;
+}
+
+.errors .error-item {
+    list-style-type: none;
+    color: red;
+}
+
+.error-messages .errors {
+    padding: 0;
+    margin: 1rem;
+}
+
+.toast {
+    position: fixed;
+    right: 5px;
+    top: 42px;
+    width: 300px;
+    height: 80px;
+    padding: .75rem 1.25rem;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    animation: move 2s both;
+}
+
+.toast-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.close {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

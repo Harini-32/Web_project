@@ -1,0 +1,70 @@
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.books header h2 {
+    font-size: 50px;
+}
+
+.card-img-top {
+    height: 220px;
+    margin-top: 10px;
+}
+
+.card {
+    border-radius: 10px;
+    border: 1px solid #DE1975;
+    box-shadow: 0 10px 20px #ccc;
+    height: 350px;
+}
+
+.card .btn.btn-details {
+    background-color: #DE1975;
+    border: none;
+    position: absolute;
+    bottom: 10px;
+}
+
+.card .btn.btn-add {
+    background-color: #0c5d0c;
+    border: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.book-cat-list {
+    margin-bottom: 20px;
+}
+
+.toast {
+    position: fixed;
+    right: 5px;
+    top: 42px;
+    width: 300px;
+    height: 80px;
+    padding: .75rem 1.25rem;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    animation: move 2s both;
+    z-index: 1;
+}
+
+.toast-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.close {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
